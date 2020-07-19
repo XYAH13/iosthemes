@@ -17,8 +17,6 @@ class FirstViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hbd_barStyle = .default
-        self.hbd_barShadowHidden = true
         self.navigationItem.largeTitleDisplayMode = .never
     }
     

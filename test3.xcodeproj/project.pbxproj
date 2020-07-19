@@ -31,8 +31,6 @@
 		7A18737524C3398C00247EA3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18737424C3398C00247EA3 /* BaseViewController.swift */; };
 		7A18737824C33AAA00247EA3 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18737724C33AAA00247EA3 /* BaseTableViewController.swift */; };
 		7AACDAE524C30BCB0061D092 /* MainSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACDAE424C30BCB0061D092 /* MainSearchController.swift */; };
-		7ADFC93524C394FA008A14AB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 7ADFC92C24C394FA008A14AB /* .gitkeep */; };
-		7ADFC93624C394FA008A14AB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 7ADFC92E24C394FA008A14AB /* .gitkeep */; };
 		7ADFC93724C394FA008A14AB /* HBDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFC93024C394FA008A14AB /* HBDNavigationBar.m */; };
 		7ADFC93824C394FA008A14AB /* HBDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFC93224C394FA008A14AB /* HBDNavigationController.m */; };
 		7ADFC93924C394FA008A14AB /* UIViewController+HBD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFC93424C394FA008A14AB /* UIViewController+HBD.m */; };
@@ -582,7 +580,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Yurik;
 				TargetAttributes = {
 					7A101D3B24C1A8E4000FD0C8 = {
@@ -632,8 +630,6 @@
 				7A101D7B24C1DBB2000FD0C8 /* ThirdViewController.xib in Resources */,
 				7A101D7624C1AACE000FD0C8 /* SecondViewController.xib in Resources */,
 				7A101D9024C21E91000FD0C8 /* MyCustomView.xib in Resources */,
-				7ADFC93524C394FA008A14AB /* .gitkeep in Resources */,
-				7ADFC93624C394FA008A14AB /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +790,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -801,6 +798,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -851,6 +849,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -858,6 +857,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -19,14 +19,11 @@ class SecondViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hbd_barTintColor = .white
-//        self.hbd_barShadowHidden = true
         self.configure()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationItem.hidesSearchBarWhenScrolling = true
     }
     
     func configure() {
@@ -37,9 +34,7 @@ class SecondViewController: BaseTableViewController {
     
     func configureSearchStubs() {
         self.navigationItem.searchController = MainSearchController(searchResultsController: nil)
-//        if let imageView = searchController.searchBar.subviews.first?.subviews.first as? UIImageView {
-//            imageView.isHidden = true
-//        }
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     override func configureColors() {
@@ -50,7 +45,7 @@ class SecondViewController: BaseTableViewController {
 
 extension SecondViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,6 +54,10 @@ extension SecondViewController {
         cell.textLabel?.textColor = ColorThemeManager.shared.getUIColor(by: .text)
         cell.backgroundColor = ColorThemeManager.shared.getUIColor(by: .background)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 33
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -24,15 +24,15 @@ class MainNavigationController: UINavigationController {
         super.viewDidLoad()
         self.delegate = self
         self.configureTabBar()
-//        self.configureColors()
+        self.configureColors()
     }
     
     private func configureTabBar() {
         self.navigationBar.prefersLargeTitles = true
-//        self.navigationBar.isTranslucent = true
-//        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        self.navigationBar.shadowImage = UIImage()
-//        self.backgroundView = self.setupBackgroundView()
+        self.navigationBar.isTranslucent = true
+        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationBar.shadowImage = UIImage()
+        self.backgroundView = self.setupBackgroundView()
     }
     
     private func setupBackgroundView() -> UIView {
@@ -47,58 +47,40 @@ class MainNavigationController: UINavigationController {
         view.layer.zPosition = -1
         return view
     }
+    
+//    override func popViewController(animated: Bool) -> UIViewController? {
+//        (self.viewControllers.last?.navigationItem.searchController as? MainSearchController)?.removeBackgroundView()
+//        return super.popViewController(animated: animated)
+//    }
 }
 
 extension MainNavigationController: ThemeAble {
     func configureColors() {
-//        var largeTitleTextAttributes = self.navigationBar.largeTitleTextAttributes ?? [:]
-//        largeTitleTextAttributes.updateValue(
-//            ColorThemeManager.shared.getUIColor(by: .text),
-//            forKey: NSAttributedStringKey.foregroundColor
-//        )
-//        self.navigationBar.largeTitleTextAttributes = largeTitleTextAttributes
-//        var titleTextAttributes = self.navigationBar.titleTextAttributes ?? [:]
-//        titleTextAttributes.updateValue(
-//            ColorThemeManager.shared.getUIColor(by: .text),
-//            forKey: NSAttributedStringKey.foregroundColor
-//        )
-//        self.navigationBar.titleTextAttributes = titleTextAttributes
-//        self.navigationBar.barTintColor = .clear
-//        self.backgroundView?.backgroundColor = ColorThemeManager.shared.getUIColor(by: .background)
-//        self.view.backgroundColor = ColorThemeManager.shared.getUIColor(by: .background)
+        var largeTitleTextAttributes = self.navigationBar.largeTitleTextAttributes ?? [:]
+        largeTitleTextAttributes.updateValue(
+            ColorThemeManager.shared.getUIColor(by: .text),
+            forKey: NSAttributedStringKey.foregroundColor
+        )
+        self.navigationBar.largeTitleTextAttributes = largeTitleTextAttributes
+        var titleTextAttributes = self.navigationBar.titleTextAttributes ?? [:]
+        titleTextAttributes.updateValue(
+            ColorThemeManager.shared.getUIColor(by: .text),
+            forKey: NSAttributedStringKey.foregroundColor
+        )
+        self.navigationBar.titleTextAttributes = titleTextAttributes
+        self.backgroundView?.backgroundColor = ColorThemeManager.shared.getUIColor(by: .background)
+        self.view.backgroundColor = ColorThemeManager.shared.getUIColor(by: .background)
         self.setNeedsStatusBarAppearanceUpdate()
     }
 }
 
 extension MainNavigationController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-//        var tmp: ((UIView) -> Void)!
-//        tmp = {view in
-//            for subview in view.subviews {
-//                subview.isOpaque = true
-//                subview.alpha = 1
-//                print(subview, "alpha:", view.alpha)
-//                if let imageView = subview as? UIImageView {
-//                    self.imageView = imageView
-//                }
-//                tmp(subview)
-//            }
-//        }
-//        tmp(self.navigationBar)
+        
     }
     
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-//        var tmp: ((UIView) -> Void)!
-//        tmp = {view in
-//            for subview in view.subviews {
-//                if let imageView = subview as? UIImageView {
-//                    imageView.alpha = 1
-//                }
-////                print(subview, "alpha:", view.alpha)
-//                tmp(subview)
-//            }
-//        }
-//        tmp(self.navigationBar)
+        
     }
     
     private func findShadowImage(under view: UIView) -> UIImageView? {
@@ -112,5 +94,19 @@ extension MainNavigationController: UINavigationControllerDelegate {
             }
         }
         return nil
+    }
+}
+
+extension MainNavigationController {
+    enum Style {
+        case normal
+        case transparent(tintColor: UIColor)
+    }
+    
+    static func navBarStyle(for viewController: UIViewController) -> Style {
+        if viewController is ThirdViewController {
+            return .transparent(tintColor: .white)
+        }
+        return .normal
     }
 }

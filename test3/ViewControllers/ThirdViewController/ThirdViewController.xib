@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,28 +19,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-U6-Gvw">
-                    <rect key="frame" x="164" y="28" width="46" height="30"/>
+                    <rect key="frame" x="164.5" y="8" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="didFirstBtnClick:" destination="-1" eventType="touchUpInside" id="RqF-UT-0yX"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-uT-ROG">
-                    <rect key="frame" x="164" y="66" width="46" height="30"/>
+                    <rect key="frame" x="164.5" y="46" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="didSecondBtnClick:" destination="-1" eventType="touchUpInside" id="tvr-KA-HW9"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-3M-4Q5">
-                    <rect key="frame" x="328" y="28" width="39" height="30"/>
+                    <rect key="frame" x="328" y="8" width="39" height="30"/>
                     <state key="normal" title="Close"/>
                     <connections>
                         <action selector="didCloseBtnClick:" destination="-1" eventType="touchUpInside" id="WnG-Um-xE0"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fCd-U6-Gvw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="URa-ga-eUw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0Ds-3M-4Q5" secondAttribute="trailing" constant="8" id="bYr-jm-1sa"/>
@@ -51,6 +50,7 @@
                 <constraint firstItem="Z8O-uT-ROG" firstAttribute="top" secondItem="fCd-U6-Gvw" secondAttribute="bottom" constant="8" id="tbw-Et-8Kj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="154"/>
         </view>
     </objects>
 </document>
