@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="test3" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="sr4-um-ded"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-8o-2VH" customClass="MyCustomView" customModule="test3" customModuleProvider="target">
+                    <rect key="frame" x="162" y="0.0" width="50" height="254"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Jvm-Sz-pER"/>
+                        <constraint firstAttribute="height" constant="254" id="yTR-u5-5Sw"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGM-AX-ues">
+                    <rect key="frame" x="164" y="52" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didBtnClick:" destination="-1" eventType="touchUpInside" id="Rqs-49-UMS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpS-fW-IjV">
+                    <rect key="frame" x="164" y="90" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didSecondBtnClick:" destination="-1" eventType="touchUpInside" id="SPV-sL-gIv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ejK-8o-2VH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GPY-pu-rNM"/>
+                <constraint firstItem="DGM-AX-ues" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Yiu-FS-SzQ"/>
+                <constraint firstItem="DGM-AX-ues" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="fcf-02-SuP"/>
+                <constraint firstItem="BpS-fW-IjV" firstAttribute="top" secondItem="DGM-AX-ues" secondAttribute="bottom" constant="8" id="nfH-md-T9o"/>
+                <constraint firstItem="ejK-8o-2VH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="o2H-XV-Dfo"/>
+                <constraint firstItem="BpS-fW-IjV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="shh-mX-aPI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </view>
+    </objects>
+</document>

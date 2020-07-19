@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdViewController" customModule="test3" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="8vR-Jm-6FE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-U6-Gvw">
+                    <rect key="frame" x="164" y="28" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didFirstBtnClick:" destination="-1" eventType="touchUpInside" id="RqF-UT-0yX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-uT-ROG">
+                    <rect key="frame" x="164" y="66" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didSecondBtnClick:" destination="-1" eventType="touchUpInside" id="tvr-KA-HW9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-3M-4Q5">
+                    <rect key="frame" x="328" y="28" width="39" height="30"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="didCloseBtnClick:" destination="-1" eventType="touchUpInside" id="WnG-Um-xE0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fCd-U6-Gvw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="URa-ga-eUw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0Ds-3M-4Q5" secondAttribute="trailing" constant="8" id="bYr-jm-1sa"/>
+                <constraint firstItem="Z8O-uT-ROG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ki0-Xf-YTB"/>
+                <constraint firstItem="fCd-U6-Gvw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oXa-Fm-Njd"/>
+                <constraint firstItem="0Ds-3M-4Q5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="oll-e3-mqU"/>
+                <constraint firstItem="Z8O-uT-ROG" firstAttribute="top" secondItem="fCd-U6-Gvw" secondAttribute="bottom" constant="8" id="tbw-Et-8Kj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
